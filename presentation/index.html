@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Bootstrap sí, pero no</title>
+	
+	<meta name="description" content="A jQuery library for modern HTML presentations">
+	<meta name="author" content="Caleb Troughton">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="../extensions/scale/deck.scale.css">
+	
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="../themes/style/web-2.0.css">
+	
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="../themes/transition/horizontal-slide.css">
+	
+	<script src="../modernizr.custom.js"></script>
+
+    <!--Google Analytics-->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18260985-4']);
+      _gaq.push(['_setDomainName', '.garciaechegaray.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="deck-container">
+
+<!-- Begin slides -->
+<section class="slide" id="title">
+	<h1>Bootstrap sí, <br>pero no</h1>
+</section>
+
+<section class="slide" id="que-es-bootstrap">
+    <h2>¿Qué es Bootstrap?</h2>
+    <p>Bootstrap es un framework front-end desarrollado y liberado por Twitter</p>  
+    <img src="img/01.png" alt="Bootstrap example">
+</section>
+
+<section class="slide" id="nota">
+	<h2>Nota aclaratoria</h2>
+	<p>Aunque en la charla vamos a hablar sobre Bootstrap, consideramos más relevante:</p>
+	<ul>
+		<li>
+			<h3>Metodología y filosofía de trabajo</h3>
+			<ul>
+				<li>Esta forma de trabajo no ha nacido de la noche a la mañana, ni  tampoco ha sido creada por Twitter.</li>
+            	<li>Ha sido la propia comunidad web quien ha creado y aportado nuevas formas de entender el desarrollo front-end.</li>
+            </ul>
+		</li>
+		<li>
+			<h3>Compendio de buenas prácticas y nuevas tecnologías</h3>
+			<ul>
+				<li>Es probable que Bootstrap quede desfasado en algún momento, y sea reemplazado por otra herramienta de moda. (i.e.: <a href="http://www.markboulton.co.uk/journal/comments/rethinking-css-grids">grid systems</a>)</li>
+				<li>Pero los conceptos seguirán presentes. Y estos si que irán evolucionando y adaptandose al medio.</li>
+			</ul>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="hablaremos-sobre">
+	<h2>Hablaremos sobre...</h2>
+	<ol>
+		<li>
+			<h3>Ventajas</h3>
+		</li>
+		<li>
+			<h3>Desventajas</h3>
+		</li>
+		<li>
+			<h3>Consejos</h3>
+		</li>
+		<li>
+			<h3>Alternativas</h3>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="ventajas">
+    <h1>Ventajas</h1>
+</section>
+
+<section class="slide" id="ventajas-01">
+	<h2>Ventajas (1/5)</h2>
+	<p><strong>Utiliza componentes y servicios creados por la comunidad:</strong></p>
+	<ul>
+        <li><a href="http://code.google.com/p/html5shim/">HTML5 shim</a></li>
+        <li><a href="https://github.com/necolas/normalize.css">Normalize.css</a></li>
+        <li><a href="https://github.com/stubbornella/oocss">OOCSS</a></li>
+        <li><a href="http://jqueryui.com/">jQuery UI</a> (implementa 12 plugins)</li>
+        <li><a href="http://lesscss.org/">LESS</a></li>
+        <li><a href="https://github.com/">GitHub</a></li>
+    </ul>
+</section>
+
+<section class="slide" id="ventajas-02">
+	<h2>Ventajas (2/5)</h2>
+    <p><strong>Es un compendio de buenas prácticas:</strong></p>
+    <ul>
+        <li>Implementa los nuevos estándares: <a href="http://html5doctor.com/element-index/">HTML5</a> + <a href="http://haz.io/">CSS3</a></li>
+        <li>Uso intensivo de:
+        	<ul>
+                <li><a href="http://peter.sh/experiments/vendor-prefixed-css-property-overview">Vendor prefixes</a>: -moz, -webkit, -o, -ms (gracias a LESS, fáciles de escribir)</li>
+                <li><a href="http://addyosmani.com/polyfillthehtml5gaps/slides/#1">Polyfills</a> vía <a href="http://code.google.com/p/html5shim/">HTML5 Shim</a></li>
+                <li><a href="https://twitter.com/#!/janogarcia/statuses/170501234992758785">Prefixed classes</a>: btn, alert, navbar, thumbnails, etc.</li>
+            </ul>
+        </li>
+        <li><a href="https://github.com/twitter/bootstrap/blob/master/less/sprites.less">CSS Sprites</a> para la iconografía. Algo sucio porque usa el elemento &lt;i&gt; para meter el icono. <pre>&lt;i class="icon-inbox icon-white">&lt;/i&gt;</pre> (hay ya soluciones + modernas como <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>, <a href="http://shmelev.github.com/fontomas/">Fontomas</a>, <a href="http://pictos.cc/articles/using-icon-fonts/">Pictos</a>, <a href="http://tipogram.com/">Tipogram</a>, <a href="http://fico.lensco.be/">Fico</a>, etc.)</li>
+        <li>Cross-browser
+            <ul>
+                <li>IE 7/8/9, Firefox, Chrome, Safari</li>
+                <li>Mac y Windows</li>
+            </ul>
+        </li>        
+    </ul>
+</section>
+
+<section class="slide" id="ventajas-03">
+    <h2>Ventajas (2/5)</h2>
+    <p><strong>Es un compendio de buenas prácticas:</strong></p>
+    <ul>
+        <li><a href="http://www.thegridsystem.org/">Grid system</a>
+            <ul>
+                <li>12 columnas por defecto. Fijas (px) o fluidas (%).</li>
+                <li>Configurables vía <a href="https://github.com/twitter/bootstrap/blob/master/less/grid.less">grid.less</a> y <a href="https://github.com/twitter/bootstrap/blob/master/less/variables.less">variables.less</a></li>
+                <li>Implementa <abbr title="Responsive Web Design">RWD</abbr> design vía <a href="https://github.com/twitter/bootstrap/blob/master/less/responsive.less">responsive.less</a></li>
+                <li>Bueno, <abbr title="Responsive Web Design">RWD</abbr> es mucho más, no nos engañemos. Ver <a href="http://www.lukew.com/ff/entry.asp?1392"><abbr title="Responsive Web Design + Server Side Components">RESS</abbr></a>, <a href="https://github.com/yiibu/profile">Profile de Yiibu</a>, <a href="http://detector.dmolsen.com/">Detector</a>, etc.</li>
+                <li><a href="http://es.scribd.com/doc/83060624/Responsive-Web-Design-Diseno-Sensible-by-janogarcia">¿Qué es <abbr title="Responsive Web Design">RWD</abbr>?</a> by <a href="http://twitter.com/#!/janogarcia">@janogarcia</a></li>
+            </ul>
+        </li>
+    </ul>
+    <img src="img/02.png" alt="Tabla Responsive Design">
+</section>
+
+<section class="slide" id="ventajas-04">
+	<h2>Ventajas (2/5)</h2>
+    <p><strong>Es un compendio de buenas prácticas</strong></p>
+    <ul>         
+        <li><a href="http://lesscss.org/">LESS</a>
+            <ul>
+                <li>Organizados en <a href="https://github.com/twitter/bootstrap/tree/master/less">36 archivos LESS</a></li>
+                <li><a href="http://markdotto.com/bootstrap/">Preboots.less</a> :  “is a super awesome pack of mixins and variables to be used in conjunction with LESS.” By <a href="https://twitter.com/mdo">@mdo</a>. O si lo prefieres, puedes usar <a href="http://lesselements.com/">LESS Elements</a>.</li>
+            </ul>
+        </li>                
+        <li><a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a>
+                <ul>
+                <li>Todo esta organizado por módulos, los cuales son independientes y reutilizables en todo el proyecto.</li>
+                <li><a href="https://groups.google.com/forum/?hl=en#!topic/object-oriented-css/LUiec9X2ZDk"><em>‘What are everyone's thoughts on Twitter Bootstrap’</em></a> (Official OOCSS Group)</li>
+                <li><a href="http://es.scribd.com/doc/60772875/OOCSS-Version-anotada-janogarcia">¿Qué es OOCSS?</a> by <a href="http://twitter.com/#!/janogarcia">@janogarcia</a></li>
+            </ul>
+        </li>                
+    </ul>
+</section>
+
+<section class="slide" id="ventajas-05">
+	<h2>Ventajas (3/5)</h2>
+
+    <p><strong>Tiene una enorme comunidad</strong></p>
+    <ul>
+        <li>GitHub info (a fecha 17 de abril del 2012)
+        	<ul>
+            	<li>Wachers: 24k</li>
+            	<li>Fork: 4k</li>
+            	<li>Issues: 3k</li>
+            	<li>Contribuidores: 122</li>
+            	<li>Páginas vistas: 2 millones en los últimos 90 días</li>
+            	<li>Pull requests: 15 abiertos y 84 cerrados</li>
+            </ul>
+        </li>
+        <li>Implementaciones externas
+        	<ul>
+            	<li><a href="http://wordpress.org/extend/plugins/wordpress-bootstrap-css/">Wordpress</a></li>
+            	<li><a href="http://drupal.org/project/twitter_bootstrap">Drupal</a></li>
+            	<li><a href="https://github.com/thomas-mcdonald/bootstrap-sass">SASS</a></li>
+            	<li><a href="http://addyosmani.github.com/jquery-ui-bootstrap/">jQuery UI</a> by <a href="https://twitter.com/#!/addyosmani">@addyosmani</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</section>
+
+<section class="slide" id="ventajas-06">
+    <h2>Ventajas (4/5)</h2>
+
+    <p><strong>Puede servirte como herramienta ágil para construir interfaces.</strong></p>
+    <ul>
+        <li>Es fácil construir rápidamente con él.</li>
+        <li>Para prototipar apps/sitios webs en ciertos casos.</li>
+        <li>¿Nadie trabajando en herramientas visuales de prototipado que acaben generando código HTML/CSS como salida basándose en Bootstrap? ;)</li>
+    </ul>
+
+</section>
+
+<section class="slide" id="ventajas-theme-01">
+	<h2>Ventajas (5/5)</h2>
+	<p><strong>Tiene un theme por defecto bastante apañado</strong></p>
+	<ul>	
+    	<li>Obviamente puedes modificar el theme básico vía <a href="https://github.com/twitter/bootstrap/blob/master/less/variables.less">variables.less</a></li>
+    </ul>
+    <img src="img/13.png" alt="Theme">
+</section>
+
+<section class="slide" id="ventajas-theme-02">
+    <h2>Ventajas (5/5)</h2>
+    <p><strong>Tiene un theme por defecto bastante apañado.</strong></p>
+    <ul>    
+        <li>
+            Generador externo para personalizar Bootstrap: <a href="http://stylebootstrap.info/">Style Bootstrap</a>
+            <ul>
+                <li>Eso sí, genera un ".css". No esperes un ".less" con las variables personalizadas. Pierdes las ventajas de edición de LESS.</li>
+                <li><i>"Create unique design with Bootstrap v2"</i>. Lo de <i>"unique"</i> es una quimera. Básicamente modificamos tipografía, color y algunos paddings.</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="img/12.png" alt="Theme">
+</section>
+
+<section class="slide" id="ventajas-theme-03">
+    <h2>Ventajas (5/5)</h2>
+    <p><strong>Tiene un theme por defecto bastante apañado</strong></p>
+    <ul>    
+        <li>
+            Bajar un theme alternativo en <a href="http://bootswatch.com/">Boots Watch</a>.
+            <ul>
+                <li>No esperemos tanta variedad como en themes de WP, por ejemplo. Básicamente cambio de tipografía y color.</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="img/11.png" alt="Theme">
+</section>
+
+<section class="slide" id="ventajas-theme-04">
+    <h2>Ventajas (5/5)</h2>
+    <p><strong>Tiene un theme por defecto bastante apañado</strong></p>
+    <ul>    
+        <li>Y si eres un poco vago o sibarita: puedes comprar un theme en <a href="http://wrapbootstrap.com/">Wrap Bootstrap</a> por un módico precio.</li>
+    </ul>
+    <img src="img/10.png" alt="Theme">
+</section>
+
+<section class="slide" id="desventajas">
+    <h1>Desventajas</h1>
+</section>
+
+<section class="slide" id="desventajas-01">
+	<h2>Desventajas</h2>
+	<p><strong>Es necesario adaptarse a su forma de trabajo</strong></p>
+	<ul>	
+        <li>Aunque la curva de aprendizaje es liviana, deberás <strong>familiarizarte con su estructura y nomenclatura</strong>.</li>        
+		<li>Si vas a utilizar el <strong>grid</strong>, recuerda que tu diseño gráfico debe estar adaptado a las 12 columnas.
+            Además el ancho de las columnas y <a href="http://desktoppub.about.com/cs/pagelayout/g/gutter.htm">gutters</a> es variable según el dispositivo y su contexto.</li>
+        <li>Por defecto ya tiene anchos, margenes y altos de línea.</li>
+		<li>Es complicado (o casi imposible) <a href="http://twitter.github.com/bootstrap/upgrading.html">cambiar de versión</a> si has realizado modificaciones profundas sobre el core.</li>
+        <li>Si necesitas <strong>añadir componentes que no existen</strong> <i>(i.e.: calendario)</i>, quizá debas <strong>personalizarlos</strong> (CSS) para que mantenga la coherencia con tu diseño y cuidar el <strong>responsiveness</strong> (Bootstrap no lo hará por ti).</li>
+    </ul>
+</section>
+
+<section class="slide" id="consejos">
+    <h1>Consejos</h1>
+</section>
+
+<section class="slide" id="consejos-01">
+	<h2>Consejos (1/3)</h2>
+	<ul>
+        <li>Te puede servir como un <strong>documento entregable</strong> para el cliente (€) u otro proveedor</li>
+        <li>Todos los integrantes de proyecto deben conocer y trabajar con Bootstrap
+        	<ul>
+            	<li>Conocer las ventajas y limitaciones del toolkit.</li>
+            	<li>Conocer las implicaciones de realizar cambios importantes.</li>
+            	<li>Debe convertirse en la <strong>guía de estilos web del proyecto</strong> para maquetadores, programadores, UX, diseñadores gráficos, generadores de contenido y otros proveedores.</li>
+            </ul>
+        </li>
+        <li><strong>Ten claro qué módulos vas a utilizar</strong> en tu proyecto
+        	<ul>
+            	<li>Bootstrap se compone de muchos ficheros: <a href="https://github.com/twitter/bootstrap/tree/master/less">36 ficheros LESS</a> y <a href="https://github.com/twitter/bootstrap/tree/master/js">12 ficheros JS</a></li>
+                <li>Si piensas en mobile, piensa en responsive, comprime, cachea, reduce peticiones...</li>
+            	<li>Es probable que no vayas a necesitar todos y cada uno de los módulos. No sobrecargues.</li>
+            	<li>De cara al desarrollo, mantenimiento y rendimiento es mejor trabajar con poco código.</li>
+            	<li>Tu IDE se puede volver loco con <a href="https://github.com/twitter/bootstrap/blob/master/docs/assets/css/bootstrap.css">4000 líneas de código CSS</a>.</li>
+        	</ul>
+        </li>
+    </ul>                            
+</section>
+
+<section class="slide" id="consejos-less-02">
+    <h2>Consejos (2/3)</h2>
+    <ul>
+        <li><strong>Aprende a trabajar con LESS</strong></li>
+    </ul>            
+    <p><img src="img/09.png" alt="LESS"></p>                
+</section>
+
+<section class="slide" id="consejos-less-03">
+	<h2>Consejos (2/3)</h2>
+	<ul>
+        <li><strong>Aprende a trabajar con LESS</strong>
+        	<ul>
+            	<li>Twitter recomienda trabajar con LESS: “CSS changes must be done in .less files first, never just the compiled files”</li>
+            	<li>Twitter’s way: <a href="http://twitter.github.com/bootstrap/less.html#compiling">compiling LESS in local</a></li>
+            	<li>Otra opción: compilar, minimizar y cachear en servidor:
+            		<ul>
+                        <li><a href="http://leafo.net/lessphp/">LESS PHP</a></li>
+                        <li><a href="https://github.com/asual/lesscss-servlet">LESS Servlet</a></li>
+                        <li><a href="http://www.dotlesscss.org/">Dot LESS</a> y <a href="http://getcassette.net/">Cassettte</a></li>
+                        <li><a href="http://search.cpan.org/~drinchev/CSS-LESSp-0.86/lib/CSS/LESSp.pm">LESS Perl</a></li>
+                        <li><a href="http://code.google.com/p/lesscss-python/">LESS Python</a></li>
+                    </ul>
+                </li>
+                <li>IDE que soportan LESS actualmente:
+                	<ul>
+                        <li>Sublime Text: <a href="https://github.com/danro/LESS-sublime">LESS Sublime</a></li>
+                        <li>PhPStrom / WebStrom: Soporte nativo</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>                            
+</section>
+
+<section class="slide" id="consejos-03">
+	<h2>Consejos (3/3)</h2>
+	<ul>
+        <li><strong>El flujo de trabajo debe cambiar</strong>
+        	<ul>
+        		<li>Antes de ponerte a diseñar o maquetar piensa en cada elemento que compone una página.</li>
+                <li>Si se trata de un módulo: organiza el trabajo de HTML/CSS/JS de éste como tal. Esto es más eficiente y facilita su reutilización. Piensa en OOCSS.</li>
+                <li>Si te lo montas bien, tu framework front-end terminará siendo una guía de estilos. Y la inspiración debe salir de allí, no al revés.</li>
+                <li><a href="http://eamodeorubio.github.com/be_nice_to_your_web_designer/#/templates">Can you do pair programming with your designer?</a> by <a href="https://twitter.com/#!/eamodeorubio">@eamodeorubio</a></li>                    
+            </ul>                
+        </li>
+    </ul>                            
+</section>
+
+
+<section class="slide" id="alternativas">
+    <h1>Alternativas</h1>
+</section>
+
+<section class="slide" id="alternativas-guia-01">
+	<h2>Alternativas (1/3)</h2>
+	<ul>
+        <li><strong>Crea tu propia guía de estilos</strong>
+        	<ul>
+	            <li><a href="http://www.starbucks.com/static/reference/styleguide/">Starbucks</a></li>
+            </ul>    
+        </li>
+    </ul>
+    <p><img src="img/03.png" alt="Guias de estilos"></p>
+</section>
+
+<section class="slide" id="alternativas-guia-02">
+    <h2>Alternativas (1/3)</h2>
+    <ul> 
+        <li><strong>Crea tu propia guía de estilos</strong>
+            <ul>
+                <li><a href="http://chriscoyier.github.com/SurveyMonkey-Design-Patterns/">SurveyMonkey</a></li>
+            </ul>    
+        </li>
+    </ul>
+    <p><img src="img/04.png" alt="Guias de estilos"></p>
+</section>
+
+<section class="slide" id="alternativas-guia-03">
+    <h2>Alternativas (1/3)</h2>
+    <ul>
+        <li><strong>Crea tu propia guía de estilos</strong>
+            <ul>
+                <li><a href="http://www.flickr.com/photos/aarronwalter/5579386649/sizes/o/in/photostream/">MailChimp</a></li>
+                <li>BTW, una hermosa guía de Mailchimp sobre el tono comunicativo: <a href="http://voiceandtone.com/">Voice and tone</a>.</li>
+            </ul>    
+        </li>
+    </ul>                
+    <p><img src="img/05.png" alt="Guias de estilos"></p>
+</section>
+
+<section class="slide" id="alternativas-otros-frameworks-01">
+	<h2>Alternativas (2/3)</h2>
+	<ul>
+        <li><strong>Utiliza otros frameworks</strong>
+        	<ul>
+	            <li><a href="http://foundation.zurb.com/">Foundation</a> “Rapid Prototyping and Building Framework from ZURB”</li>
+            </ul>    
+        </li>
+    </ul>
+    <p><img src="img/06.png" alt="Guias de estilos"></p>                        
+</section>
+
+<section class="slide" id="alternativas-otros-frameworks-02">
+    <h2>Alternativas (2/3)</h2>
+    <ul>
+        <li><strong>Utiliza otros frameworks</strong>
+            <ul>
+                <li><a href="http://compass-style.org/">Compass</a></li>
+                <li><a href="http://stitchcss.com/">Stitch</a></li>
+            </ul>
+        </li>
+    </ul>    
+    <p><img src="img/07.png" alt="Guias de estilos"></p>                        
+</section>
+
+<section class="slide" id="alternativas-otros-frameworks-03">
+    <h2>Alternativas (2/3)</h2>
+    <ul>
+        <li><strong>Utiliza otros frameworks</strong>
+            <ul>
+                <li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> A rock-solid default for HTML5 awesome.</li>
+            </ul>
+        </li>
+    </ul>     
+    <p><img src="img/08.png" alt="Guias de estilos"></p>                        
+</section>
+
+<section class="slide" id="alternativas-documenta-01">
+	<h2>Alternativas (3/3)</h2>
+	<ul>
+        <li><strong>Documenta tus estilos</strong>
+        	<ul>
+	            <li><a href="http://pea.rs">Pears</a> “Pears is an open source WordPress theme, enabling people like you to get your own pattern library up and running quickly. ”</li>
+                <li>Vete creando tu propia librería de "reusables". Reciclar y adaptar es salir a tu hora del tajo. ;)</li>
+            </ul>
+        </li>
+    </ul>    
+    <p><img src="img/16.png" alt="Documenta"></p>                           
+</section>
+
+<section class="slide" id="alternativas-documenta-02">
+    <h2>Alternativas  (3/3)</h2>
+    <ul>
+        <li><strong>Documenta tus estilos</strong>
+            <ul>
+                <li><a href="http://warpspire.com/posts/kss/">Knyle Style Sheets</a> “KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. ”</li>
+            </ul>
+        </li>
+    </ul>    
+    <p><img src="img/15.png" alt="Documenta"></p>                           
+</section>
+
+<section class="slide" id="alternativas-documenta-03">
+    <h2>Alternativas  (3/3)</h2>
+    <ul>
+        <li><strong>Documenta tus estilos</strong>
+            <ul>
+                <li><a href="http://jacobrask.github.com/styledocco/">StyleDocco</a> “StyleDocco generates documentation and style guide documents from your stylesheets.” </li></li>
+            </ul>
+        </li>
+    </ul>    
+    <p><img src="img/14.png" alt="Documenta"></p>
+</section>
+
+<section class="slide" id="preguntas">
+	<h1>¿Preguntas?, ¿Debate?, ¿Birras?</h1>
+</section>
+
+<section class="slide" id="gracias">
+	<h1>¡Gracias!</h1>
+</section>
+
+<section class="slide" id="more">
+    <h2>¡Esto es todo amigos!</h2>
+    <ul>
+        <li><strong>Una charla organizada por:</strong>
+            <ul>
+                <li><a href="https://twitter.com/#!/the_melee/status/191953538535014401">The Mêlée</a></li>
+            </ul>
+        </li>
+        <li><strong>Créditos:</strong>
+            <ul>
+                <li><a href="https://twitter.com/#!/maxkuri">@maxkuri</a></li>
+                <li><a href="http://twitter.com/#!/garciaechegaray">@garciaechegaray</a></li>
+            </ul>
+        </li>
+        <li><strong>Para saber más:</strong>
+            <ul>
+                <li><a href="https://github.com/brunogarcia/Front-end-Wiki/wiki">Front-end Wiki</a> a Front-end Development Resources</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="../jquery-1.7.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+	$.deck('.slide');
+});
+</script>
+
+</body>
+</html>
